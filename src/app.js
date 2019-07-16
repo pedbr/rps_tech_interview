@@ -19,14 +19,16 @@ const playRock = () => {
 
 const playPaper = () => {
     let playerChoice = `PAPER`
+    let computerChoice = getComputerChoice()
     let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice}!`
+    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}!`
 }
 
 const playScissors = () => {
     let playerChoice = `SCISSORS`
+    let computerChoice = getComputerChoice()
     let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice}!`
+    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}!`
 }
 
 document.getElementById("play-rock").addEventListener("click", playRock);
