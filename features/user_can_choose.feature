@@ -6,15 +6,15 @@ Feature:
   Background:
     Given I visit the site
 
-  Scenario:  User can choose Rock
+  Scenario: User can choose Rock
     When I click the "ROCK" button
-    Then I should see "YOU PICKED ROCK!"
+    Then I should see "YOU PICKED ROCK"
 
-  Scenario:  User can choose Paper
+  Scenario: User can choose Paper
     When I click the "PAPER" button
-    Then I should see "YOU PICKED PAPER!"
+    Then I should see "YOU PICKED PAPER"
 
-  Scenario:  User can choose Scissors
+  Scenario: User can choose Scissors
     When I click the "SCISSORS" button
-    Then I should see "YOU PICKED SCISSORS!"
+    Then I should see "YOU PICKED SCISSORS"
     
