@@ -1,0 +1,8 @@
+{
+  "name": "rps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pedrocbras/rps_tech_interview.git",
+  "author": "pedro_bras <pedro.c.bras@gmail.com>",
+  "license": "MIT"
+}
