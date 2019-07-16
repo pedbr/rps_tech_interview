@@ -25,28 +25,24 @@ class rpsWorld {
     expect(actualContent).to.be.eq(expectedContent)
   }
 
+  btnSelectorFromName(btnName) {
+    if (btnName === 'rock') {
+      return '#play-rock'
+    } else if (btnName === 'paper') {
+        return '#play-paper'
+    } else if (btnName === 'scissors') {
+        return '#play-scissors'
+    } else {
+       `${btnName} button is not defined`
+    }
+  }
+
   async clickOnButton(btnName) {
     const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
     await this.page.waitForSelector(btnSelector)
     await this.page.click(btnSelector)
   }
 
-  btnSelectorFromName(btnName) {
-    switch (btnName) {
-      case 'play rock':
-        return '#play-rock'
-        break
-      case 'play paper':
-        return '#play-paper'
-        break
-      case 'play scissors':
-        return '#play-scissors'
-        break
-      default:
-        throw `${btnName} button is not defined`
-        break
-    }
-  }
 }
 
 setWorldConstructor(rpsWorld)

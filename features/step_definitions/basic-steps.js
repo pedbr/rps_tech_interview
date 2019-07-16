@@ -9,7 +9,7 @@ Given("I visit the site", async function() {
 });
 
 When('I click the {string} button', async function(string) {
-    return await this.clickOnAddContactBtn()
+    return await this.clickOnButton(string)
   })
 
 Then('I should see {string}', async function(content) {
