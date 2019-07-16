@@ -33,11 +33,14 @@ class rpsWorld {
 
   btnSelectorFromName(btnName) {
     switch (btnName) {
-      case 'add contact':
-        return '.add-contact'
+      case 'play rock':
+        return '#play-rock'
         break
-      case 'save contact':
-        return '.save-contact'
+      case 'play paper':
+        return '#play-paper'
+        break
+      case 'play scissors':
+        return '#play-scissors'
         break
       default:
         throw `${btnName} button is not defined`
