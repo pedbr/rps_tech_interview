@@ -22,7 +22,7 @@ const playRock = () => {
         showResult = `YOU WIN!`
     }
     let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! ${showResult}`
+    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
 }
 
 const playPaper = () => {
@@ -37,7 +37,7 @@ const playPaper = () => {
         showResult = `YOU LOSE!`
     }
     let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! ${showResult}`
+    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
 }
 
 const playScissors = () => {
@@ -52,7 +52,7 @@ const playScissors = () => {
         showResult = `IT'S A TIE!`
     }
     let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! ${showResult}`
+    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
 }
 
 document.getElementById("play-rock").addEventListener("click", playRock);
