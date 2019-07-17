@@ -8,34 +8,30 @@ body {
 }
 
 .title {
-    border:1px solid black;
     text-align: center;
 }
 
 .buttons {
-    border:1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .choices {
+    margin-top:20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border:1px solid black;
     height: 350px;
 }
 
 .user-choice {
-    border:1px solid black;
     text-align:center;
     width:300px;
     height:300px;
 }
 
 .vs {
-    border:1px solid black;
     width:80px;
     height:300px;
     display: flex;
@@ -46,14 +42,12 @@ body {
 }
 
 .computer-choice {
-    border:1px solid black;
     text-align:center;
     width:300px;
     height:300px;
 }
 
 .player-chose {
-    border:1px solid black;
     display: flex;
     text-align: center;
     align-items: center;
@@ -79,7 +73,6 @@ body {
 }
 
 .computer-chose {
-    border:1px solid black;
     display: flex;
     text-align: center;
     align-items: center;
@@ -105,8 +98,7 @@ body {
 }
 
 .result {
-    border:1px solid black;
-    height: 250px;
+    height: 200px;
     display: flex;
     text-align:center;
     align-items: center;
