@@ -27,6 +27,8 @@ const playRock = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
+
+    return showResult
 }
 
 const playPaper = () => {
@@ -46,6 +48,8 @@ const playPaper = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
+
+    return showResult
 }
 
 const playScissors = () => {
@@ -65,8 +69,39 @@ const playScissors = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
+
+    return showResult
+}
+
+const displayResult = () => {
+    let userScore = 0
+    let compScore = 0
+    let rockResult = playRock()
+    let paperResult = playPaper()
+    let scissorsResult = playScissors()
+    if (rockResult == `YOU WIN!`){
+        userScore ++
+    } else if (rockResult == `YOU LOSE!`){
+        compScore ++
+    }
+    if (paperResult == `YOU WIN!`){
+        userScore ++
+    } else if (paperResult == `YOU LOSE!`){
+        compScore ++
+    }
+    if (scissorsResult == `YOU WIN!`){
+        userScore ++
+    } else if (scissorsResult == `YOU LOSE!`){
+        compScore ++
+    }
+    let displayResult = document.getElementById("score")
+    displayResult.innerHTML = `${userScore} - ${compScore}`
 }
 
 document.getElementById("play-rock").addEventListener("click", playRock);
 document.getElementById("play-paper").addEventListener("click", playPaper);
 document.getElementById("play-scissors").addEventListener("click", playScissors);
+
+document.getElementById("play-rock").addEventListener("click", displayResult);
+document.getElementById("play-paper").addEventListener("click", displayResult);
+document.getElementById("play-scissors").addEventListener("click", displayResult);
