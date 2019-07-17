@@ -21,8 +21,12 @@ const playRock = () => {
     } else {
         showResult = `YOU WIN!`
     }
-    let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
+    let displayChoice = document.getElementById("player-option")
+    displayChoice.innerHTML = `${playerChoice}`
+    let displayComputer = document.getElementById("computer-option")
+    displayComputer.innerHTML = `${computerChoice}`
+    let displayResult = document.getElementById("result-display")
+    displayResult.innerHTML = `${showResult}`
 }
 
 const playPaper = () => {
@@ -36,8 +40,12 @@ const playPaper = () => {
     } else {
         showResult = `YOU LOSE!`
     }
-    let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
+    let displayChoice = document.getElementById("player-option")
+    displayChoice.innerHTML = `${playerChoice}`
+    let displayComputer = document.getElementById("computer-option")
+    displayComputer.innerHTML = `${computerChoice}`
+    let displayResult = document.getElementById("result-display")
+    displayResult.innerHTML = `${showResult}`
 }
 
 const playScissors = () => {
@@ -51,8 +59,12 @@ const playScissors = () => {
     } else {
         showResult = `IT'S A TIE!`
     }
-    let displayChoice = document.getElementById("display-choice")
-    displayChoice.innerHTML = `YOU PICKED ${playerChoice} AND COMPUTER CHOSE ${computerChoice}! RESULT: ${showResult}`
+    let displayChoice = document.getElementById("player-option")
+    displayChoice.innerHTML = `${playerChoice}`
+    let displayComputer = document.getElementById("computer-option")
+    displayComputer.innerHTML = `${computerChoice}`
+    let displayResult = document.getElementById("result-display")
+    displayResult.innerHTML = `${showResult}`
 }
 
 document.getElementById("play-rock").addEventListener("click", playRock);
