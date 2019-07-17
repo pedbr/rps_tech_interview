@@ -6,3 +6,51 @@ body {
 #title {
     color: #9E5A63;
 }
+
+.title {
+    border:1px solid black;
+    text-align: center;
+}
+
+.buttons {
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-rock {
+    font-family: 'Rubik';
+    background-color: #314455;
+    border: none;
+    color: #C96567;
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#play-paper {
+    font-family: 'Rubik';
+    background-color: #314455;
+    border: none;
+    color: #C96567;
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#play-scissors {
+    font-family: 'Rubik';
+    background-color: #314455;
+    border: none;
+    color: #C96567;
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
