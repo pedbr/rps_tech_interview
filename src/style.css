@@ -19,6 +19,37 @@ body {
     justify-content: center;
 }
 
+.choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    height: 350px;
+}
+
+.user-choice {
+    border:1px solid black;
+    width:300px;
+    height:300px;
+}
+
+.vs {
+    border:1px solid black;
+    width:80px;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9E5A63;
+    font-size: 30px;
+}
+
+.computer-choice {
+    border:1px solid black;
+    width:300px;
+    height:300px;
+}
+
 #play-rock {
     font-family: 'Rubik';
     background-color: #314455;
