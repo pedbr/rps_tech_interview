@@ -8,12 +8,12 @@ Feature:
 
   Scenario: Result shows when user picks Rock
     When I click the "ROCK" button
-    Then I should see "RESULT:"
+    Then I should see "!"
 
   Scenario: Result shows when user picks Paper
     When I click the "PAPER" button
-    Then I should see "RESULT:"
+    Then I should see "!"
 
   Scenario: Result shows when user picks Scissors
     When I click the "SCISSORS" button
-    Then I should see "RESULT:"
+    Then I should see "!"
