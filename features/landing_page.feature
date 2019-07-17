@@ -6,4 +6,4 @@ Feature:
 
   Scenario: User is able to see landing page
     Given I visit the site
-    Then I should see "Rock Paper Scissors"
+    Then I should see "LET'S PLAY"
