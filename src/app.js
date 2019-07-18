@@ -21,10 +21,10 @@ const playRock = () => {
         showResult = `IT'S A TIE!`
     } else if (computerChoice == `PAPER`){
         showResult = `YOU LOSE!`
-        compScore +=1
+        compScore++
     } else {
         showResult = `YOU WIN!`
-        userScore +=1
+        userScore++
     }
     let displayChoice = document.getElementById("player-option")
     displayChoice.innerHTML = `${playerChoice}`
@@ -42,12 +42,12 @@ const playPaper = () => {
     let showResult
     if (computerChoice == `ROCK`){
         showResult = `YOU WIN!`
-        userScore +=1
+        userScore++
     } else if (computerChoice == `PAPER`){
         showResult = `IT'S A TIE!`
     } else {
         showResult = `YOU LOSE!`
-        compScore +=1
+        compScore++
     }
     let displayChoice = document.getElementById("player-option")
     displayChoice.innerHTML = `${playerChoice}`
@@ -55,6 +55,8 @@ const playPaper = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
+    console.log(userScore)
+    console.log(compScore)
 }
 
 const playScissors = () => {
@@ -63,10 +65,10 @@ const playScissors = () => {
     let showResult
     if (computerChoice == `ROCK`){
         showResult = `YOU LOSE!`
-        compScore +=1
+        compScore++
     } else if (computerChoice == `PAPER`){
         showResult = `YOU WIN!`
-        userScore +=1
+        userScore++
     } else {
         showResult = `IT'S A TIE!`
     }
@@ -76,6 +78,8 @@ const playScissors = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
+    console.log(userScore)
+    console.log(compScore)
 }
 
 let displayResult = document.getElementById("score")
@@ -84,4 +88,3 @@ displayResult.innerHTML = `${userScore} - ${compScore}`
 document.getElementById("play-rock").addEventListener("click", playRock);
 document.getElementById("play-paper").addEventListener("click", playPaper);
 document.getElementById("play-scissors").addEventListener("click", playScissors);
-
