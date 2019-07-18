@@ -1,3 +1,8 @@
+var scores = {player: 0, comp: 0,}
+
+let displayResult = document.getElementById("score")
+displayResult.innerHTML = `${scores.player} - ${scores.comp}`
+
 const getComputerChoice = () => {
     let computerPlay = Math.random();
     if (computerPlay < 0.34) {
@@ -13,6 +18,10 @@ const getComputerChoice = () => {
 const playRock = () => {
     let playerChoice = `ROCK`
     let computerChoice = getComputerChoice()
+    let scores = {
+        player: 0, 
+        comp: 0,
+    }
     let showResult
     if (computerChoice == `ROCK`){
         showResult = `IT'S A TIE!`
@@ -28,12 +37,22 @@ const playRock = () => {
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
 
-    return showResult
+    if (computerChoice == `SCISSORS`) {
+        scores.player ++
+    } else if (computerChoice == `PAPER`){
+        scores.comp ++
+    }
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${scores.player} - ${scores.comp}`
 }
 
 const playPaper = () => {
     let playerChoice = `PAPER`
     let computerChoice = getComputerChoice()
+    let scores = {
+        player: 0, 
+        comp: 0,
+    }
     let showResult
     if (computerChoice == `ROCK`){
         showResult = `YOU WIN!`
@@ -49,12 +68,23 @@ const playPaper = () => {
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
 
-    return showResult
+    if (computerChoice == `ROCK`) {
+        scores.player ++
+    } else if (computerChoice == `SCISSORS`){
+        scores.comp ++
+    }
+
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${scores.player} - ${scores.comp}`
 }
 
 const playScissors = () => {
     let playerChoice = `SCISSORS`
     let computerChoice = getComputerChoice()
+    let scores = {
+        player: 0, 
+        comp: 0,
+    }
     let showResult
     if (computerChoice == `ROCK`){
         showResult = `YOU LOSE!`
@@ -70,38 +100,16 @@ const playScissors = () => {
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
 
-    return showResult
-}
-
-const displayResult = () => {
-    let userScore = 0
-    let compScore = 0
-    let rockResult = playRock()
-    let paperResult = playPaper()
-    let scissorsResult = playScissors()
-    if (rockResult == `YOU WIN!`){
-        userScore ++
-    } else if (rockResult == `YOU LOSE!`){
-        compScore ++
+    if (computerChoice == `PAPER`) {
+        scores.player ++
+    } else if (computerChoice == `ROCK`){
+        scores.comp ++
     }
-    if (paperResult == `YOU WIN!`){
-        userScore ++
-    } else if (paperResult == `YOU LOSE!`){
-        compScore ++
-    }
-    if (scissorsResult == `YOU WIN!`){
-        userScore ++
-    } else if (scissorsResult == `YOU LOSE!`){
-        compScore ++
-    }
-    let displayResult = document.getElementById("score")
-    displayResult.innerHTML = `${userScore} - ${compScore}`
+    
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${scores.player} - ${scores.comp}`
 }
 
 document.getElementById("play-rock").addEventListener("click", playRock);
 document.getElementById("play-paper").addEventListener("click", playPaper);
 document.getElementById("play-scissors").addEventListener("click", playScissors);
-
-document.getElementById("play-rock").addEventListener("click", displayResult);
-document.getElementById("play-paper").addEventListener("click", displayResult);
-document.getElementById("play-scissors").addEventListener("click", displayResult);
