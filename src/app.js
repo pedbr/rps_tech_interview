@@ -1,14 +1,14 @@
-let userScore = 0;
-let compScore = 0;
+let userScore = 0
+let compScore = 0
 
 const getComputerChoice = () => {
     let computerPlay = Math.random();
     if (computerPlay < 0.34) {
         computerPlay = `ROCK`;
     } else if(computerPlay <= 0.67) {
-        computerPlay = `PAPER`;
+        computerPlay = `PAPER`
     } else {
-        computerPlay = `SCISSORS`;
+        computerPlay = `SCISSORS`
     }
     return computerPlay
 }
@@ -20,10 +20,10 @@ const playRock = () => {
     if (computerChoice == `ROCK`){
         showResult = `IT'S A TIE!`
     } else if (computerChoice == `PAPER`){
-        showResult = `YOU LOSE!`;
+        showResult = `YOU LOSE!`
         compScore +=1
     } else {
-        showResult = `YOU WIN!`;
+        showResult = `YOU WIN!`
         userScore +=1
     }
     let displayChoice = document.getElementById("player-option")
@@ -32,7 +32,8 @@ const playRock = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
-
+    console.log(userScore)
+    console.log(compScore)
 }
 
 const playPaper = () => {
@@ -40,13 +41,13 @@ const playPaper = () => {
     let computerChoice = getComputerChoice()
     let showResult
     if (computerChoice == `ROCK`){
-        showResult = `YOU WIN!`;
-        userScore +=1;
+        showResult = `YOU WIN!`
+        userScore +=1
     } else if (computerChoice == `PAPER`){
         showResult = `IT'S A TIE!`
     } else {
-        showResult = `YOU LOSE!`;
-        compScore +=1;
+        showResult = `YOU LOSE!`
+        compScore +=1
     }
     let displayChoice = document.getElementById("player-option")
     displayChoice.innerHTML = `${playerChoice}`
@@ -61,10 +62,10 @@ const playScissors = () => {
     let computerChoice = getComputerChoice()
     let showResult
     if (computerChoice == `ROCK`){
-        showResult = `YOU LOSE!`;
-        compScore +=1;
+        showResult = `YOU LOSE!`
+        compScore +=1
     } else if (computerChoice == `PAPER`){
-        showResult = `YOU WIN!`;
+        showResult = `YOU WIN!`
         userScore +=1
     } else {
         showResult = `IT'S A TIE!`
