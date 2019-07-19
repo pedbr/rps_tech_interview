@@ -37,7 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #9E5A63;
+    color: #644E5B;
     font-size: 30px;
 }
 
@@ -100,9 +100,53 @@ body {
 .result {
     height: 200px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#players {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #644E5B;
+}
+
+#you {
+    margin-right:100px;
+    margin-left:40px;
+}
+
+#computer {
+    margin-left:50px;
+}
+
+#score-text {
+    margin-left: 250px;
+    font-size: 40px;
+    color: #314455;
+}
+
+#score {
+    display: flex;
     text-align:center;
     align-items: center;
     justify-content: center;
+    width: 400px;
+    height: 100px;
+    background-color: #97AABD;
+    color: #C96567;
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+#last-choice {
+    display: flex;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
 }
 
 #result-display {
@@ -116,6 +160,7 @@ body {
     width: 500px;
     height: 200px;
     font-size: 80px;
+    margin-left: 100px
 }
 
 #play-rock {
