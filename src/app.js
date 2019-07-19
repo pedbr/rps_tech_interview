@@ -32,8 +32,8 @@ const playRock = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
-    console.log(userScore)
-    console.log(compScore)
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${userScore} - ${compScore}`
 }
 
 const playPaper = () => {
@@ -55,8 +55,8 @@ const playPaper = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
-    console.log(userScore)
-    console.log(compScore)
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${userScore} - ${compScore}`
 }
 
 const playScissors = () => {
@@ -78,12 +78,9 @@ const playScissors = () => {
     displayComputer.innerHTML = `${computerChoice}`
     let displayResult = document.getElementById("result-display")
     displayResult.innerHTML = `${showResult}`
-    console.log(userScore)
-    console.log(compScore)
+    let displayScore = document.getElementById("score")
+    displayScore.innerHTML = `${userScore} - ${compScore}`
 }
-
-let displayResult = document.getElementById("score")
-displayResult.innerHTML = `${userScore} - ${compScore}`
 
 document.getElementById("play-rock").addEventListener("click", playRock);
 document.getElementById("play-paper").addEventListener("click", playPaper);
